@@ -1,8 +1,8 @@
 for i in 7A_CTCF_DMSO 7A_CTCF_dTAG 7B_CTCF_DMSO 7B_CTCF_dTAG;do
-        trim_galore -q 20 -j 7 --phred33 --stringency 3 --length 20 -e 0.1 --paired ${i}_R*fq.gz -o ./
-        cutadapt -a file:/home/whh/private/linker_micro-c/linker/MicroC_S-linker.fa -A file:/home/whh/private/linker_micro-c/linker/MicroC_S-linker.fa -j 10 --minimum-length=10 -o trimLk/${i}_R1_val_1_trimlinker.fq.gz -p trimLk/${i}_R2_val_2_trimlinker.fq.gz ${i}_R1_val_1.fq.gz ${i}_R2_val_2.fq.gz > trimLk/${i}.txt
-        cutadapt -a file:/home/whh/private/linker_micro-c/linker/MicroC_S-linker.fa -A file:/home/whh/private/linker_micro-c/linker/MicroC_S-linker.fa -j 10 --minimum-length=10 -o trimLk/${i}_R1_val_1_trimlinker2.fq.gz -p trimLk/${i}_R2_val_2_trimlinker2.fq.gz trimLk/${i}_R1_val_1_trimlinker.fq.gz trimLk/${i}_R2_val_2_trimlinker.fq.gz > trimLk/${i}2.txt
-        cutadapt -a file:/home/whh/private/linker_micro-c/linker/MicroC_S-linker_AT.fa -A file:/home/whh/private/linker_micro-c/linker/MicroC_S-linker_AT.fa -j 10 --minimum-length=10 -o trimLk/${i}_R1_val_1_trimlinker3.fq.gz -p trimLk/${i}_R2_val_2_trimlinker3.fq.gz trimLk/${i}_R1_val_1_trimlinker2.fq.gz trimLk/${i}_R2_val_2_trimlinker2.fq.gz > trimLk/${i}3.txt
+	trim_galore -q 20 -j 7 --phred33 --stringency 3 --length 20 -e 0.1 --paired ${i}_R*fq.gz -o ./
+	cutadapt -a file:/home/whh/private/linker_micro-c/linker/MicroC_S-linker.fa -A file:/home/whh/private/linker_micro-c/linker/MicroC_S-linker.fa -j 10 --minimum-length=10 -o trimLk/${i}_R1_val_1_trimlinker.fq.gz -p trimLk/${i}_R2_val_2_trimlinker.fq.gz ${i}_R1_val_1.fq.gz ${i}_R2_val_2.fq.gz > trimLk/${i}.txt
+	cutadapt -a file:/home/whh/private/linker_micro-c/linker/MicroC_S-linker.fa -A file:/home/whh/private/linker_micro-c/linker/MicroC_S-linker.fa -j 10 --minimum-length=10 -o trimLk/${i}_R1_val_1_trimlinker2.fq.gz -p trimLk/${i}_R2_val_2_trimlinker2.fq.gz trimLk/${i}_R1_val_1_trimlinker.fq.gz trimLk/${i}_R2_val_2_trimlinker.fq.gz > trimLk/${i}2.txt
+	cutadapt -a file:/home/whh/private/linker_micro-c/linker/MicroC_S-linker_AT.fa -A file:/home/whh/private/linker_micro-c/linker/MicroC_S-linker_AT.fa -j 10 --minimum-length=10 -o trimLk/${i}_R1_val_1_trimlinker3.fq.gz -p trimLk/${i}_R2_val_2_trimlinker3.fq.gz trimLk/${i}_R1_val_1_trimlinker2.fq.gz trimLk/${i}_R2_val_2_trimlinker2.fq.gz > trimLk/${i}3.txt
 	mkdir data_${i}
 	cd data_${i}
 	mkdir ${i}
