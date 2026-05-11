@@ -1,0 +1,1 @@
+java -jar /mnt/disk1/6/share/software/juicer_tools_1.22.01.jar apa -r 10000 -c 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,X /mnt/disk6/1/ZBTB7AB/HiChIP/CTCF/7A/cool/7A_CTCF_DMSO.allValidPairs.hic ../CTCF_DMSO_dTAG_PP.bedpe 7A_DMSO_PP  --threads 40 -k NONE -u -n 20
