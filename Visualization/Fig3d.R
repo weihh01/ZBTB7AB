@@ -4,7 +4,7 @@ library(reshape2)
 aaa <- read.xlsx("loop.xlsx")
 
 colnames(aaa) <- c("type", "ratio", "dataset")
-aaa$type <- factor(aaa$type, levels = c("PP","EP","EE","struc"), labels = c("Pro-Pro","Enh-Enh","Enh-Pro","Struc-Struc"))
+aaa$type <- factor(aaa$type, levels = c("PP","EE","EP","struc"), labels = c("Pro-Pro","Enh-Enh","Enh-Pro","Struc-Struc"))
 aaa$dataset <- factor(aaa$dataset, levels = c("up","none"), labels = c("strengthened loops","satble loops"))
 
 ggplot(data = aaa, mapping = aes(x = dataset, y = ratio, fill = type)) +
